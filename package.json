@@ -1,0 +1,24 @@
+{
+  "name": "api-wallet",
+  "version": "1.0.0",
+  "description": "api to mangment incomes and outcomes",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celotts/api-wallet.git"
+  },
+  "author": "Carlos Lott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celotts/api-wallet/issues"
+  },
+  "homepage": "https://github.com/celotts/api-wallet#readme",
+  "dependencies": {
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.56"
+  }
+}
