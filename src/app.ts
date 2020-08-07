@@ -7,13 +7,19 @@ dotenv.config({
     path: `${__dirname}/../config/${process.env.APP_ENV}.env`
 });
 
-console.log("ver---", process.env.APP_FOO);
-
 import express = require('express');
+import { loadControllers } from 'awilix-express';
 
 const app: express.Application = express();
 
 app.get('/', (req, res) => {
     res.send('Running ...');
 });
+
+import { container } from './container';
+
+app.use(loadControllers(
+    'controllers/*.ts',
+    { cwd: __filename }
+));
 export { app };
