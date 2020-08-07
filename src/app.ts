@@ -9,6 +9,7 @@ dotenv.config({
 
 import express = require('express');
 import { loadControllers } from 'awilix-express';
+import loadContainer from './container';
 
 const app: express.Application = express();
 
@@ -16,7 +17,10 @@ app.get('/', (req, res) => {
     res.send('Running ...');
 });
 
-import { container } from './container';
+// Container
+loadContainer(app);
+
+// Controllers
 
 app.use(loadControllers(
     'controllers/*.ts',
