@@ -1,4 +1,4 @@
-export class Testservice {
+export class TestService {
     get(): Date {
         return new Date();
     }
